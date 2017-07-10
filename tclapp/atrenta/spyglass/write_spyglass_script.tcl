@@ -23,18 +23,18 @@
 ###############################################################################
 package require Vivado 1.2015.1
 
-namespace eval ::tclapp::atrenta::spyglass {
+namespace eval ::tclapp::synopsys::spyglass {
     # Export procs that should be allowed to import into other namespaces
     namespace export write_spyglass_script
 }
 
-proc ::tclapp::atrenta::spyglass::matches_default_libs {lib} {
+proc ::tclapp::synopsys::spyglass::matches_default_libs {lib} {
 
   # Summary: internally used routine to check if default libs used
   # Argument Usage: 
   # lib: name of lib to check if default lib
   # Return Value: 
-  # Categories: xilinxtclstore, atrenta, spyglass
+  # Categories: xilinxtclstore, synopsys, spyglass
 
   regsub ":.*" $lib {} lib
   if {[string match -nocase $lib "xil_defaultlib"]} {
@@ -46,14 +46,14 @@ proc ::tclapp::atrenta::spyglass::matches_default_libs {lib} {
   }
 }
 
-proc ::tclapp::atrenta::spyglass::uniquify_lib {lib lang num} {
+proc ::tclapp::synopsys::spyglass::uniquify_lib {lib lang num} {
 
   # Summary: internally used routine to uniquify libs
   # Argument Usage:
   # lib: lib name to match
   # num: uniquified lib name
   # Return Value:
-  # Categories: xilinxtclstore, atrenta, spyglass
+  # Categories: xilinxtclstore, synopsys, spyglass
 
   set new_lib ""
   if {[matches_default_libs $lib]} {
@@ -64,16 +64,16 @@ proc ::tclapp::atrenta::spyglass::uniquify_lib {lib lang num} {
   return $new_lib
 }
 
-proc ::tclapp::atrenta::spyglass::write_spyglass_script {top_module outfile} {
+proc ::tclapp::synopsys::spyglass::write_spyglass_script {top_module outfile} {
 
   # Summary : This proc generates the spyglass project file
   # Argument Usage:
   # top_module: Provide the design top name
   # outfile: Provide the file name to store the SpyGlass Configuration data
   # Return Value: Returns '1' on successful completion
-  # Categories: xilinxtclstore, atrenta, spyglass
+  # Categories: xilinxtclstore, synopsys, spyglass
 
-  puts "Calling ::tclapp::atrenta::spyglass::write_spyglass_script"
+  puts "Calling ::tclapp::synopsys::spyglass::write_spyglass_script"
 
   ## Set return code to 0
   set rc 0
