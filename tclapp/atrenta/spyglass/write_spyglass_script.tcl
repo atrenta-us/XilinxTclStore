@@ -373,7 +373,7 @@ proc ::tclapp::synopsys::spyglass::write_spyglass_script {top_module outfile} {
   puts $sg_fh "set_option enable_auto_infer_bus_pins yes"
   puts $sg_fh "set_option read_protected_envelope yes"
   puts $sg_fh "set_option enable_fpga yes\n\n"
-  puts $sg_fh "current_methodology \$SPYGLASS_HOME/GuideWare2.0/block/rtl_handoff\n"
+  puts $sg_fh "current_methodology \$SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff\n"
   puts $sg_fh "current_goal cdc/cdc_setup"
   puts $sg_fh "set_goal_option addrules Setup_blackbox01\n"
 
