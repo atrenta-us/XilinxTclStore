@@ -1,7 +1,7 @@
 # tclapp/atrenta/spyglass/spyglass.tcl
 package require Tcl 8.4
 
-namespace eval ::tclapp::atrenta::spyglass {
+namespace eval ::tclapp::synopsys::spyglass {
 
     # Allow Tcl to find tclIndex
     variable home [file join [pwd] [file dirname [info script]]]
@@ -10,7 +10,7 @@ namespace eval ::tclapp::atrenta::spyglass {
     }
 
 }
-package provide ::tclapp::atrenta::spyglass 1.5
+package provide ::tclapp::synopsys::spyglass 1.5
 # this is a comment
 # this is another comment
 # this is a 3rd comment line
